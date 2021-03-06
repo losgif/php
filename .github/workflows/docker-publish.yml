@@ -15,7 +15,7 @@ on:
 
 env:
   # Your image's name.
-  IMAGE_NAME: php
+  IMAGE_NAME: php-fpm
 
 jobs:
   # Push image to GitHub Packages.
