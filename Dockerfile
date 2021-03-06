@@ -1,4 +1,4 @@
-FROM php:7.4.11
+FROM php:7.4.11-fpm
 
 RUN sed -i 's/deb.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
 RUN sed -i 's/security.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
@@ -10,6 +10,8 @@ RUN apt-get install git nodejs npm libcurl4-gnutls-dev libicu-dev libmcrypt-dev 
     libbz2-dev libgmp3-dev libldap2-dev unixodbc-dev libpq-dev libsqlite3-dev libaspell-dev \
     libwebp-dev libjpeg62-turbo-dev libpng-dev libxpm-dev libfreetype6-dev libsnmp-dev      \
     libpcre3-dev libtidy-dev libzip-dev libonig-dev rsync -yqq
+
+RUN npm install pm2 -g
 
 RUN pecl install swoole redis
 RUN docker-php-ext-enable swoole redis
