@@ -1,4 +1,4 @@
-FROM php:7.4.11-fpm
+FROM php:7.4.16-fpm
 
 RUN sed -i 's/deb.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
 RUN sed -i 's/security.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
