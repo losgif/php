@@ -16,7 +16,7 @@ RUN npm install pm2 -g
 RUN pecl install swoole redis
 RUN docker-php-ext-enable swoole redis
 
-RUN docker-php-ext-install mbstring pdo pdo_mysql mysqli curl json intl xml zip bz2 opcache bcmath gd fileinfo pcntl
+RUN docker-php-ext-install mbstring pdo pdo_mysql mysqli curl json intl xml zip bz2 opcache bcmath gd fileinfo pcntl ldap
 
 RUN docker-php-ext-configure gd \
     --with-webp \
